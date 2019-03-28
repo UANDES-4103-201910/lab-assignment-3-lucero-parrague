@@ -10,32 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_125117) do
+ActiveRecord::Schema.define(version: 2019_03_28_164309) do
 
   create_table "events", force: :cascade do |t|
+    t.integer "venue_id"
     t.string "name"
-    t.string "description"
-    t.datetime "startd"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
-  create_table "ticket_orders", force: :cascade do |t|
+  create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "ticket_id"
-    t.integer "amount"
+    t.integer "total_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ticket_id"], name: "index_ticket_orders_on_ticket_id"
-    t.index ["user_id"], name: "index_ticket_orders_on_user_id"
+    t.index ["ticket_id"], name: "index_orders_on_ticket_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.string "event"
+    t.integer "event_id"
     t.integer "price"
     t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_tickets_on_event_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,14 +47,14 @@ ActiveRecord::Schema.define(version: 2019_03_27_125117) do
     t.string "email"
     t.string "phone"
     t.string "password"
-    t.string "addres"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "venues", force: :cascade do |t|
     t.string "name"
-    t.string "addres"
+    t.string "address"
     t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,4 +1,4 @@
-class TicketOrder < ApplicationRecord
+class Order < ApplicationRecord
   belongs_to :user
   belongs_to :ticket
 end

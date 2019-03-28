@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nname: MyString
-  addres: MyString
-  capacity: 
+  name: MyString
+  address: MyString
+  capacity: 1
 
 two:
-  nname: MyString
-  addres: MyString
-  capacity: 
+  name: MyString
+  address: MyString
+  capacity: 1

@@ -3,9 +3,9 @@
 one:
   user: one
   ticket: one
-  amount: 1
+  total_amount: 1
 
 two:
   user: two
   ticket: two
-  amount: 1
+  total_amount: 1

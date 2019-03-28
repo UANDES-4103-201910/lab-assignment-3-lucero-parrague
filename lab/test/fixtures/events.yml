@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  venue: 
   name: MyString
-  description: MyString
-  startd: 2019-03-27 09:30:58
+  start_date: 2019-03-28 13:41:28
+  end_date: 2019-03-28 13:41:28
 
 two:
+  venue: 
   name: MyString
-  description: MyString
-  startd: 2019-03-27 09:30:58
+  start_date: 2019-03-28 13:41:28
+  end_date: 2019-03-28 13:41:28
